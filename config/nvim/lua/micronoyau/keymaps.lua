@@ -28,3 +28,5 @@ s("n", "<leader>y", "\"+y")
 s("v", "<leader>y", "\"+y")
 s("n", "<leader>p", "\"+p")
 
+s("n", "<leader>t2", ":set shiftwidth=2<cr>:set tabstop=2<cr>")
+s("n", "<leader>t4", ":set shiftwidth=4<cr>:set tabstop=4<cr>")

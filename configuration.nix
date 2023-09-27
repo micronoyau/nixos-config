@@ -110,69 +110,94 @@ users.users.micronoyau = {
   isNormalUser = true;
   description = "micronoyau";
   extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" ];
-  packages = with pkgs; [
-    firefox
-    docker
-    docker-compose
-    zotero
-    qemu
-    neovim
-    ripgrep
-    tmux
-    anki
-    nodejs_20
-    coq
-    coqPackages.coqide
-    poppler_utils
-    exiftool
-    spotify
-    # Security
-    wireshark
-    nmap
-    ghidra
-    burpsuite
-    dirb
-    gobuster
-    ffuf
-    dnsrecon
-    dig
-    radare2
-    (import ./sublist3r.nix)
-  ];
 };
 
 # List packages installed in system profile. To search, run:
 # $ nix search wget
 environment.systemPackages = with pkgs; [
-  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  wget
+  # Text editors
+  vim
+  neovim
+
+  # Basic utilities
   tree
   htop
   file
-  gcc_multi
-  gdb
-  python311
-  python311Packages.virtualenv
-  python311Packages.pip
-  keepassxc
-  pciutils
-  wirelesstools
-  patchelf
-  traceroute
-  jdk17
-  unzip
   ascii
   findutils
   mlocate
-  glibc
-  gnupg
-  pinentry
-  glibc_multi
-  git
+  pciutils
+  unzip
   xclip
-  openvpn
+  tmux
+  pinentry
+  ripgrep
+  poppler_utils
+
+  # Network
+  wireshark
+  wirelesstools
+  traceroute
+  wget
   inetutils
+  dig
+  openvpn
+
+  # Binaries
+  gcc_multi
+  glibc
+  glibc_multi
+  patchelf
+
+  # Dev
+  git
+  docker
+  docker-compose
+  nodejs_20
+
+  # Virtualisation
+  qemu
+  # virtualbox # Seems to be included by default
+
+  # Security
+  gnupg
+  keepassxc
+
+  # Python
+  python311
+  python311Packages.virtualenv
+  python311Packages.pip
+
+  # Java
+  jdk17
+
+  # Math
   sage
+  coq
+  coqPackages.coqide
+
+  # Applications
+  firefox
+  zotero
+  anki
+  spotify
+
+  # Pentesting
+  # OSINT
+  exiftool
+  # Recon
+  nmap
+  dirb
+  gobuster
+  ffuf
+  dnsrecon
+  # ( python3Packages.callPackage ./sublist3r_new.nix { } )
+  # Web
+  burpsuite
+  # Pwn / reverse
+  gdb
+  ghidra
+  radare2
 ];
 
 # Some programs need SUID wrappers, can be configured further or are
