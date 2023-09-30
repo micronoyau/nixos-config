@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-nixpkgs.overlays = [ (import ./pkgs) ]
+nixpkgs.overlays = [ (import ./pkgs) ];
 
 imports =
   [ # Include the results of the hardware scan.
@@ -194,12 +194,13 @@ environment.systemPackages = with pkgs; [
   gobuster
   ffuf
   dnsrecon
-  # ( python3Packages.callPackage ./sublist3r_new.nix { } )
+  sublist3r
   # Web
   burpsuite
   # Pwn / reverse
   gdb
   ghidra
+  ida-free
   radare2
 ];
 

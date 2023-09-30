@@ -18,6 +18,9 @@ python3Packages.buildPythonApplication rec {
     requests
   ];
 
+  # Strange error if disabled (duplicate on same sublister file in store
+  pythonCatchConflictsPhase = "true";
+
   meta = with lib; {
     description = "Fast subdomains enumeration tool for penetration testers";
     longDescription = ''
