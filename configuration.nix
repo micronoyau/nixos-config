@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+nixpkgs.overlays = [ (import ./pkgs) ]
+
 imports =
   [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -110,6 +112,13 @@ users.users.micronoyau = {
   isNormalUser = true;
   description = "micronoyau";
   extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" ];
+  packages = with pkgs; [
+    # Applications
+    firefox
+    zotero
+    anki
+    spotify
+  ];
 };
 
 # List packages installed in system profile. To search, run:
@@ -175,12 +184,6 @@ environment.systemPackages = with pkgs; [
   sage
   coq
   coqPackages.coqide
-
-  # Applications
-  firefox
-  zotero
-  anki
-  spotify
 
   # Pentesting
   # OSINT
