@@ -100,6 +100,7 @@ virtualisation.docker.enable = true;
 
 # Virtualbox
 virtualisation.virtualbox.host.enable = true;
+#virtualisation.virtualbox.host.enableExtensionPack = true;
 users.extraGroups.vboxusers.members = [ "micronoyau" ];
 
 # Allow unfree packages
@@ -115,6 +116,7 @@ users.users.micronoyau = {
   packages = with pkgs; [
     # Applications
     firefox
+    # ungoogled-chromium
     zotero
     anki
     spotify
@@ -143,6 +145,9 @@ environment.systemPackages = with pkgs; [
   ripgrep
   poppler_utils
 
+  # LaTeX
+  texlive.combined.scheme-full
+
   # Network
   wireshark
   wirelesstools
@@ -151,12 +156,15 @@ environment.systemPackages = with pkgs; [
   inetutils
   dig
   openvpn
+  iptstate
+  nftables
 
   # Binaries
   gcc_multi
   glibc
   glibc_multi
   patchelf
+  gnumake
 
   # Dev
   git
@@ -164,7 +172,7 @@ environment.systemPackages = with pkgs; [
   docker-compose
   nodejs_20
 
-  # Virtualisation
+  # Virtualisation / emulation
   qemu
   # virtualbox # Seems to be included by default
 
@@ -188,8 +196,10 @@ environment.systemPackages = with pkgs; [
   # Pentesting
   # OSINT
   exiftool
+  sherlock
   # Recon
   nmap
+  masscan
   dirb
   gobuster
   ffuf
