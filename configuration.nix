@@ -205,6 +205,8 @@ environment.systemPackages = with pkgs; [
   ffuf
   dnsrecon
   sublist3r
+  # MITM
+  bettercap
   # Web
   burpsuite
   # Pwn / reverse
