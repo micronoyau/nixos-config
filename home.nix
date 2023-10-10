@@ -31,6 +31,11 @@ in
       source = ./config/gef;
     };
 
+    # Cross-comilation
+    xdg.configFile.xcompile = {
+      source = ./config/xcompile;
+    };
+
     xdg.dataFile.seclists = {
       source = builtins.fetchGit {
         url = "https://github.com/danielmiessler/SecLists.git";

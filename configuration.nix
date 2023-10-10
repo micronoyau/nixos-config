@@ -144,6 +144,7 @@ environment.systemPackages = with pkgs; [
   pinentry
   ripgrep
   poppler_utils
+  inkscape
 
   # LaTeX
   texlive.combined.scheme-full
@@ -207,6 +208,9 @@ environment.systemPackages = with pkgs; [
   sublist3r
   # MITM
   bettercap
+  # Password cracking
+  thc-hydra
+  john
   # Web
   burpsuite
   # Pwn / reverse
@@ -219,6 +223,13 @@ environment.systemPackages = with pkgs; [
 # Some programs need SUID wrappers, can be configured further or are
 # started in user sessions.
 programs.wireshark.enable = true;
+
+# Bash
+programs.bash.shellAliases = {
+    xcompile-arm-32 = "nix-shell ~/.config/xcompile/shell-arm-32.nix";
+    xcompile-riscv-64 = "nix-shell ~/.config/xcompile/shell-riscv-64.nix";
+    xcompile-mips-32 = "nix-shell ~/.config/xcompile/shell-mips-32.nix";
+};
 
 # This value determines the NixOS release from which the default
 # settings for stateful data, like file locations and database versions
