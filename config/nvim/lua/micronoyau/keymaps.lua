@@ -30,3 +30,6 @@ s("n", "<leader>p", "\"+p")
 
 s("n", "<leader>t2", ":set shiftwidth=2<cr>:set tabstop=2<cr>")
 s("n", "<leader>t4", ":set shiftwidth=4<cr>:set tabstop=4<cr>")
+
+s("n", "<leader>tt", ":ToggleTerm direction=float<cr>")
+s("t", "<Esc>", "<c-\\><c-n>")

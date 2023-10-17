@@ -145,6 +145,7 @@ environment.systemPackages = with pkgs; [
   ripgrep
   poppler_utils
   inkscape
+  libreoffice
 
   # LaTeX
   texlive.combined.scheme-full
@@ -180,6 +181,7 @@ environment.systemPackages = with pkgs; [
   # Security
   gnupg
   keepassxc
+  openssl
 
   # Python
   python311
@@ -213,11 +215,14 @@ environment.systemPackages = with pkgs; [
   john
   # Web
   burpsuite
+  # Exploits
+  metasploit
   # Pwn / reverse
   gdb
   ghidra
   ida-free
   radare2
+  ropgadget
 ];
 
 # Some programs need SUID wrappers, can be configured further or are

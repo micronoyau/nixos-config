@@ -51,6 +51,17 @@ require("lazy").setup({
 {
   "nvim-telescope/telescope.nvim",
   tag = "0.1.3"
+},
+
+{
+  "akinsho/toggleterm.nvim",
+  version = "*",
+  config = true
+},
+
+{
+  "whonore/Coqtail",
+  tag = "1.7.0"
 }
 
 })
