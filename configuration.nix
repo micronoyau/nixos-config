@@ -146,6 +146,7 @@ environment.systemPackages = with pkgs; [
   poppler_utils
   inkscape
   libreoffice
+  hexdiff
 
   # LaTeX
   texlive.combined.scheme-full
@@ -167,6 +168,10 @@ environment.systemPackages = with pkgs; [
   glibc_multi
   patchelf
   gnumake
+  cmake
+
+  # Libraries
+  zlib
 
   # Dev
   git

@@ -24,7 +24,7 @@ in
 
 stdenv.mkDerivation rec {
   pname = "ida-free";
-  version = "8.2.230124";
+  version = "8.3.230608";
 
   src = fetchurl {
     inherit (srcs.${stdenv.system}) url sha256;

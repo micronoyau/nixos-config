@@ -1,7 +1,7 @@
 {
   "x86_64-linux": {
-    "url": "https://out7.hex-rays.com/files/idafree82_linux.run",
-    "sha256": "17rbdfpq8al6vc2gp42g91asswzfnmy8j420b5n9a57xrpq9pk55"
+    "url": "https://out7.hex-rays.com/files/idafree83_linux.run",
+    "sha256": "ab93d91432f2d4f01622be64ee5cebbc9e5c6bfc92f573a402d9469d2de00a82"
   },
   "x86_64-darwin": {
     "url": "https://out7.hex-rays.com/files/idafree82_mac.app.zip",
