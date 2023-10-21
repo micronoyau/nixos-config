@@ -26,8 +26,6 @@ require("lazy").setup({
   }
 },
 
-"nvim-treesitter/nvim-treesitter",
-
 {
   "folke/tokyonight.nvim",
   lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -37,6 +35,8 @@ require("lazy").setup({
     vim.cmd([[colorscheme tokyonight]])
   end,
 },
+
+"nvim-treesitter/nvim-treesitter",
 
 {
   "nvim-neo-tree/neo-tree.nvim",
@@ -62,8 +62,17 @@ require("lazy").setup({
 {
   "whonore/Coqtail",
   tag = "1.7.0"
-}
+},
+
+{
+  "iamcco/markdown-preview.nvim",
+  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  build = "cd app && yarn install",
+  init = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+  end,
+  ft = { "markdown" },
+},
 
 })
-
 

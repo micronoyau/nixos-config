@@ -178,6 +178,7 @@ environment.systemPackages = with pkgs; [
   docker
   docker-compose
   nodejs_20
+  yarn
 
   # Virtualisation / emulation
   qemu
