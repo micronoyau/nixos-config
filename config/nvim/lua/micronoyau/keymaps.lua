@@ -9,7 +9,7 @@ s("n", "<leader>ee", ":Neotree toggle<cr>")
 s("n", "<leader>ef", ":Neotree focus<cr>")
 
 s("n", "<leader>bf", ":Telescope buffers<cr>")
-s("n", "<leader>ff", ":Telescope fd<cr>")
+s("n", "<leader>ff", ":Telescope live_grep<cr>")
 
 s("n", "<leader><tab>", ":bnext<cr>")
 s("n", "<leader><S-tab>", ":bprev<cr>")
@@ -33,3 +33,7 @@ s("n", "<leader>t4", ":set shiftwidth=4<cr>:set tabstop=4<cr>")
 
 s("n", "<leader>tt", ":ToggleTerm direction=float<cr>")
 s("t", "<Esc>", "<c-\\><c-n>")
+
+s("n", "<leader>hd", ":HexDump<cr>")
+s("n", "<leader>ha", ":HexAssemble<cr>")
+

@@ -74,5 +74,9 @@ require("lazy").setup({
   ft = { "markdown" },
 },
 
+{ 'RaafatTurki/hex.nvim' }
+
 })
+
+require 'hex'.setup()
 

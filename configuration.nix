@@ -117,7 +117,7 @@ users.users.micronoyau = {
     # Applications
     firefox
     # ungoogled-chromium
-    zotero
+    # zotero
     anki
     spotify
   ];
@@ -194,18 +194,28 @@ environment.systemPackages = with pkgs; [
   python311Packages.virtualenv
   python311Packages.pip
 
+  # Rust
+  rustc
+  cargo
+
   # Java
   jdk17
+
+  # Android
+  android-studio
+  android-tools
 
   # Math
   sage
   coq
   coqPackages.coqide
 
-  # Pentesting
+  # Security
   # OSINT
   exiftool
   sherlock
+  # Stegano
+  sonic-visualiser
   # Recon
   nmap
   masscan
