@@ -108,16 +108,20 @@ nixpkgs.config.allowUnfree = true;
 
 nix.settings.extra-experimental-features = "nix-command flakes";
 
+nixpkgs.config.permittedInsecurePackages = [
+  "zotero-6.0.26"
+];
+
 # Define a user account. Don't forget to set a password with ‘passwd’.
 users.users.micronoyau = {
   isNormalUser = true;
   description = "micronoyau";
-  extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" ];
+  extraGroups = [ "networkmanager" "wheel" "wireshark" "docker" "dialout" ];
   packages = with pkgs; [
     # Applications
     firefox
     # ungoogled-chromium
-    # zotero
+    zotero
     anki
     spotify
   ];
@@ -147,6 +151,8 @@ environment.systemPackages = with pkgs; [
   inkscape
   libreoffice
   hexdiff
+  usbutils
+  screen
 
   # LaTeX
   texlive.combined.scheme-full
@@ -179,6 +185,9 @@ environment.systemPackages = with pkgs; [
   docker-compose
   nodejs_20
   yarn
+
+  # Arduino
+  arduino
 
   # Virtualisation / emulation
   qemu
